@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" href="assets/images/mechanism.ico">
+<title>Mechanisms - Resources</title>
+
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?v=5" type="text/css" />
+<link rel="stylesheet" href="assets/css/style.css?v=5" type="text/css" />
+<link href='https://unpkg.com/boxicons@1.9.3/css/boxicons.min.css?v=5' rel='stylesheet'>
+<script type="text/javascript" src="assets/js/modernizr.js?v=5"></script>
+
+<!-- Extra CSS stylesheets -->
+  
+
+<!-- Page specific CSS code -->
+<link rel="stylesheet" href="assets/css/tabs.css?v=5" type="text/css" />
+  
+
+</head>
+<body>
+<!-- Loader -->
+<div id="mech-loader">
+<div class="loader loader--style1" title="0">
+<i class='bx bx-loader bx-spin' ></i>
+<p>Loading...</p>
+</div>
+</div>
+
+<!-- Mechanisms Home Page Content -->
+	<div id="mech-header"></div>
+
+	<div id="mech-nhome-banner">
+		<div class="mech-module-banner container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="mech-home-banner-welcome">
+							<span class="mech-module" style="color: rgba(255, 255, 255, 0.75);">Explore</span>
+						</div>
+						<div class="mech-home-banner-headline">
+							Mechanism Resources
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mech-module-margin-top">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-12">
+					<input id="inline-search-term-real" style="display: none;" type="text" autocomplete="off"/>
+      				<div class="mech-clear-search"><i class='bx bx-x'></i></div><i class='bx bx-search'></i><input id="inline-search-term" type="text" placeholder="Search resources" autocomplete="off"/>
+				</div>
+				
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="mech-toc-panel filter-panel">
+						<div style="padding: 10px 20px 10px 20px;">
+							<p class="mech-toc-title" style="margin-top: 0px;">Filter Criteria</p>
+							
+							<div class="mech-clear-filter">Clear Filters</div>
+							
+							<div id="options">						
+							  <div class="option-set" data-group="brand">
+							  	<input id="checkbox-1" class="checkbox-custom" value=".CaseStudy" name="checkbox-1" type="checkbox"><label for="checkbox-1" class="checkbox-custom-label">Case Study</label>
+							    <input id="checkbox-2" class="checkbox-custom" value=".Narrative" name="checkbox-2" type="checkbox"><label for="checkbox-2" class="checkbox-custom-label">Narrative</label>
+							    <input id="checkbox-3" class="checkbox-custom" value=".Tip" name="checkbox-2" type="checkbox"><label for="checkbox-3" class="checkbox-custom-label">Tip Sheet</label>
+							    <input id="checkbox-4" class="checkbox-custom" value=".Video" name="checkbox-3" type="checkbox"><label for="checkbox-4" class="checkbox-custom-label">Video</label>
+							    <input id="checkbox-5" class="checkbox-custom" value=".Worksheet" name="checkbox-4" type="checkbox"><label for="checkbox-5" class="checkbox-custom-label">Worksheet</label>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-12 col-md-8 col-lg-9">
+						<p class="mech-module-page-title" style="margin-top: 10px;"><span class="mech-count"></span> Resources</p>
+						
+							<div id="mech-loader-res">
+							<div class="loader-res loader--style1" title="0">
+							<i class='bx bx-loader bx-spin' ></i>
+							<p>Loading...</p>
+							</div>
+							</div>
+
+						<div style="min-height: 285px">
+						<div class="mech-module-content" style="min-height: 100%; margin-bottom: 50px;">
+													
+								<div class="mech-404">
+									<img src="assets/images/mech-404.png">
+									<div class="mech-tips-box">
+										<div class="row"><div class="mech-check" style="padding-right: 100px;"><i class="bx bx-bulb"></i> <span class="mech-tips">We're sorry, no resources were found. Please try again using these search suggestions:</span></div></div>
+										<ol class="mech-number-list-tips" type="1" style="padding-right: 120px;">
+											<li>Make sure keywords are spelled correctly.</li>
+											<li>Try rephrasing or using synonyms.</li>
+											<li>Use less specific keywords.</li>
+											<li>Reduce the amount of filters.</li>
+										</ol>
+									</div>
+								</div>
+
+						</div>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom-padding">
+	</div>
+
+<!-- Mechanisms Footer -->
+	<div id="mech-footer"></div>
+</body>
+
+<!-- Include Javascript libraries at the end of the html body. -->
+<script type="text/javascript" src="assets/jquery/jquery.js?v=5"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js?v=5"></script>
+
+<!-- Extra JS libraries -->
+<script type="text/javascript" src="assets/js/isotope.pkgd.js?v=5"></script>
+<script type="text/javascript" src="assets/js/fontawesome.js?v=5"></script>
+<script type="text/javascript" src="assets/js/fuse.min.js?v=5"></script>
+<script type="text/javascript" src="assets/js/materialize.min.js?v=5"></script>
+<script type="text/javascript" src="assets/js/main.js?v=5"></script>
+
+
+
+<!-- Website specific JS libraries -->
+<script>
+var search = null;
+(function($, _M) {
+  'use strict';
+
+  var $searchbar = $('#inline-search-term-real');
+
+
+var res = [{
+	link: '"resources/Mechanisms Narrative with Org Levers.pdf"',
+    name: 'Mechanisms Narrative with Organizational Levers',
+    description: 'Read about the concept of mechanisms, its components, and its importance to our business and culture.',
+    type: 'bx bx-file-blank',
+    filter: 'Narrative'
+  }, {
+	link: '"resources/Mechanisms Worksheet.pdf"',
+    name: 'Mechanisms Worksheet',
+    description: 'Use this worksheet to help you assemble a mechanism.',
+    type: 'bx bx-file-blank',
+    filter: 'Worksheet'
+  }, {
+	link: '"https://broadcast.amazon.com/videos/44825"',
+    name: 'Mechanisms: Mental Models',
+    description: 'In this video, Jeff Wilke shares his insights on the Mental Model Organizational Lever.',
+    type: 'bx bx-video',
+    filter: 'Video'
+  }, {
+	link: '"https://broadcast.amazon.com/videos/38136"',
+    name: 'Good Intentions Video (Influence & Mechanisms)',
+    description: 'Jeff Bezos concisely describes the Mechanism process and its benefits.',
+    type: 'bx bx-video',
+    filter: 'Video'
+  }, {
+	link: '"resources/Organizational Levers.docx"',
+    name: 'Organizational Levers',
+    description: 'A deep dive into Organizational Levers for building Mechanisms.',
+    type: 'bx bx-file-blank',
+    filter: 'Tip'
+  }, {
+	link: '"https://broadcast.amazon.com/videos/44829"',
+    name: 'Solving Shopper Frustrations',
+    description: 'Mary Pat Gotshall describes her use of mechanisms to solve shopper frustrations.',
+    type: 'bx bx-video',
+    filter: 'Video'
+}];
+
+
+
+var options = {
+  shouldSort: true,
+  threshold: 0.35,
+  location: 0,
+  distance: 500,
+  maxPatternLength: 52,
+  minMatchCharLength: 1,
+    keys: [{
+      name: 'name',
+      weight: 0.75
+    }, {
+      name: 'description',
+      weight: 0.4
+    }]
+  };
+
+  var fuse = new Fuse(res, options);
+
+
+
+$( ".mech-clear-search" ).click(function() {
+	document.getElementById('inline-search-term').value = '';
+	document.getElementById('inline-search-term-real').value = '';
+	$("#mech-loader-res").show();
+	$(".mech-clear-search").hide();
+	searchscript();
+	
+	setTimeout(function(){ $("#inline-search-term-real").keyup(); }, 100);
+});
+
+$( ".mech-clear-filter" ).click(function() {
+
+	$("input:checkbox:checked").trigger("click");
+	var count1 = $(".mech-module-content").find(".item:visible").length;
+		$(".mech-count").html( count1 );
+	if ( count1 < 1 ) {
+		$(".mech-404").fadeIn("1500");
+		$(".mech-module-content").css("height", "100%");
+	} else {
+		$(".mech-404").fadeOut("1500");
+	}
+		$(".mech-clear-filter").hide();
+
+});
+
+$('#options').on( 'change', function( event ) {
+    if ($("input:checkbox:checked").length > 1) {
+        $(".mech-clear-filter").show();
+    } else {
+		$(".mech-clear-filter").hide();
+    }
+});
+
+// Get the input box
+var textInput = document.getElementById('inline-search-term');
+
+// Init a timeout variable to be used below
+var timeout = null;
+
+// Listen for keystroke events
+textInput.onkeyup = function (e) {
+
+    // Clear the timeout if it has already been set.
+    // This will prevent the previous task from executing
+    // if it has been less than <MILLISECONDS>
+    clearTimeout(timeout);
+
+    // Make a new timeout set to go off in 650ms
+    timeout = setTimeout(function () {
+		searchscript();
+		
+		if($("#inline-search-term").val().length > 0) {
+			$(".mech-clear-search").show();
+		} else {
+			$(".mech-clear-search").hide();
+		}
+		
+    }, 650);
+};
+
+function searchscript() {
+	$("#mech-loader-res").show();
+	var searchinput = $("#inline-search-term").val();
+	document.getElementById('inline-search-term-real').value = searchinput;
+	
+	setTimeout(function(){ $("#inline-search-term-real").keyup(); }, 100);
+}
+  
+
+res.sort(function(a, b){
+    if(a.name < b.name) { return -1; }
+    if(a.name > b.name) { return 1; }
+    return 0;
+});
+res.forEach(function(el) {
+	$(".mech-module-content").append(
+	'<div class="item ' + el.filter + '">' +
+		'<a href=' + el.link + 'target="_blank">' +
+			'<div class="mech-card-resource">' +
+				'<div class="mech-padding">' +
+					'<i class="' + el.type + '"></i>' +
+					'<span class="mech-check-item-title">' + el.name +
+					'<span class="mech-check-item-desc">' + el.description + '</span>' + '</span>' +
+				'</div>' +
+				'<div class="mech-download-icon"><table style="width: 100%; height:100%;"><tr><td class="mech-height" valign="middle"><i class="bx bxs-download"></i></td></tr></table></div>' +
+			'</div>' +
+		'</a>' +
+	'</div>')
+});
+
+
+var rescount = $('.mech-module-content').find('.item:visible').length;
+	$(".mech-count").html(rescount);
+
+
+
+
+$( "#inline-search-term-real" ).on('change paste keyup', function() {
+    var search = fuse.search($searchbar.val());
+    var $res1 = $('.mech-module-content');
+    var inputLength = $(this).val();
+
+      $res1.empty();
+      
+    if (search[0] === undefined) {
+		setTimeout(function(){ updateFilterCount1(); }, 400);
+    }
+      
+      $(".mech-module-content").append('<div id="mech-loader-res"><div class="loader-res loader--style1" title="0"><i class="bx bx-loader bx-spin"></i><p>Loading...</p></div></div>');
+      $(".mech-module-content").append('<div class="mech-404"><img src="assets/images/mech-404.png"><div class="mech-tips-box"><div class="row"><div class="mech-check" style="padding-right: 100px;"><i class="bx bx-bulb"></i> <span class="mech-tips">Sorry, no resources were found. Please try again using these search suggestions:</span></div></div><ol class="mech-number-list-tips" type="1" style="padding-right: 120px;"><li>Make sure keywords are spelled correctly.</li><li>Try rephrasing or using synonyms.</li><li>Use less specific keywords.</li><li>Reduce the amount of filters.</li></ol></div></div>');
+
+
+		if($("#inline-search-term").val().length > 0) {
+		} else {		
+				res.forEach(function(el) {
+					$(".mech-module-content").append(
+					'<div class="item ' + el.filter + '">' +
+						'<a href=' + el.link + 'target="_blank">' +
+							'<div class="mech-card-resource">' +
+								'<div class="mech-padding">' +
+									'<i class="' + el.type + '"></i>' +
+									'<span class="mech-check-item-title">' + el.name +
+									'<span class="mech-check-item-desc">' + el.description + '</span>' + '</span>' +
+								'</div>' +
+								'<div class="mech-download-icon"><table style="width: 100%; height:100%;"><tr><td class="mech-height" valign="middle"><i class="bx bxs-download"></i></td></tr></table></div>' +
+							'</div>' +
+						'</a>' +
+					'</div>')
+				});
+					setTimeout(function(){ updateFilterCount1(); }, 400);
+
+	
+		}
+
+
+setTimeout(function(){
+    search.forEach(function(el){
+	$res1.append(
+	'<div class="item ' + el.filter + '">' +
+		'<a href=' + el.link + 'target="_blank">' +
+			'<div class="mech-card-resource">' +
+				'<div class="mech-padding">' +
+					'<i class="' + el.type + '"></i>' +
+					'<span class="mech-check-item-title">' + el.name +
+					'<span class="mech-check-item-desc">' + el.description + '</span>' + '</span>' +
+				'</div>' +
+				'<div class="mech-download-icon"><table style="width: 100%; height:100%;"><tr><td class="mech-height" valign="middle"><i class="bx bxs-download"></i></td></tr></table></div>' +
+			'</div>' +
+		'</a>' +
+	'</div>');
+	
+
+
+	setTimeout(function(){ updateFilterCount1(); }, 400);
+        
+
+    });
+    	isotopecallback();
+
+},10);
+
+  });
+
+})(jQuery, Materialize);
+
+
+function isotopecallback() {
+$('.mech-module-content').isotope( 'reloadItems' ).isotope({ sortBy : 'original-order' });
+}
+
+
+
+
+/*jshint browser:true, undef: true, unused: true, jquery: true */
+// store filter per group
+var filters = {};
+
+var $container = $('.mech-module-content');
+  var $grid = $('.mech-module-content').isotope({
+    itemSelector: '.item',
+    transitionDuration: '0.3s',
+    // only scale for reveal/hide transition
+	  hiddenStyle: {
+	    opacity: 0,
+	  },
+	  visibleStyle: {
+	    opacity: 1,
+	  }
+	});
+	
+
+// do stuff when checkbox change
+var comboFilter;
+$('#options').on( 'change', function( event ) {
+  var checkbox = event.target;
+  var $checkbox = $( checkbox );
+  var group = $checkbox.parents('.option-set').attr('data-group');  
+  // create array for filter group, if not there yet
+  var filterGroup = filters[ group ];
+  if ( !filterGroup ) {
+    filterGroup = filters[ group ] = [];
+  }
+  // add/remove filter
+  if ( checkbox.checked ) {
+    // add filter
+    filterGroup.push( checkbox.value );
+  } else {
+    // remove filter
+    var index = filterGroup.indexOf( checkbox.value );
+    filterGroup.splice( index, 1 );
+  }
+  
+  var comboFilter = getComboFilter();
+  $container.isotope({ filter: comboFilter });
+  updateFilterCount();
+
+});
+
+
+function getComboFilter() {
+  var combo = [];
+  for ( var prop in filters ) {
+    var group = filters[ prop ];
+    if ( !group.length ) {
+      // no filters in group, carry on
+      continue;
+    }
+    // add first group
+    if ( !combo.length ) {
+      combo = group.slice(0);
+      continue;
+    }
+    // add additional groups
+    var nextCombo = [];
+    // split group into combo: [ A, B ] & [ 1, 2 ] => [ A1, A2, B1, B2 ]
+    for ( var i=0; i < combo.length; i++ ) {
+      for ( var j=0; j < group.length; j++ ) {
+        var item = combo[i] + group[j];
+        nextCombo.push( item );
+      }
+    }
+    combo = nextCombo;
+  }
+  var comboFilter = combo.join(', ');
+  return comboFilter;
+}
+
+
+function updateFilterCount() {
+	var iso = $grid.data('isotope');
+	var count = iso.filteredItems.length;
+	$(".mech-count").html( count );
+	if ( count < 1 ) {
+		$(".mech-404").fadeIn("2500");
+		$(".mech-module-content").css("height", "100%");
+	} else {
+		$(".mech-404").fadeOut("2500");
+	}
+}
+
+function updateFilterCount1() {
+	var count1 = $(".mech-module-content").find(".item:visible").length;
+	$(".mech-count").html( count1 );
+	if ( count1 < 1 ) {
+		$(".mech-404").fadeIn("1500");
+		$(".mech-module-content").css("height", "100%");
+	} else {
+		$(".mech-404").fadeOut("1500");
+	}
+	
+	$("#mech-loader-res").hide();
+}
+
+
+</script>
